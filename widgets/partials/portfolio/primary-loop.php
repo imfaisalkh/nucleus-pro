@@ -3,9 +3,8 @@
 	$folio_terms 			= implode(', ', nucleus_get_term_fields('portfolio_category', 'name'));
 
 	// entry dimension
-	$thumbnail_dimension 	= get_field('thumbnail_dimension');
-	$thumbnail_width 		= $thumbnail_dimension['width'];
-	$thumbnail_height 		= $thumbnail_dimension['height'];
+	$thumbnail_height 		= get_post_meta(get_the_ID(), 'thumbnail_height', true);
+	$thumbnail_width 		= get_post_meta(get_the_ID(), 'thumbnail_width', true);
 
 	// entry url
 	$folio_permalink 		= get_post_meta(get_the_ID(), 'custom_url', true) != false ? esc_url( get_post_meta(get_the_ID(), 'custom_url', true) ) : esc_url( get_permalink() );

@@ -4,9 +4,10 @@ namespace Nucleus;
 // Define each widget class name here (EDIT BELOW # 1)
 use Nucleus\Widgets\Meta_info;
 use Nucleus\Widgets\Custom_Divider;
-use Nucleus\Widgets\Twitter_Module;
 use Nucleus\Widgets\Price_Table;
 use Nucleus\Widgets\Portfolio_Module;
+use Nucleus\Widgets\Team_Module;
+use Nucleus\Widgets\Testimonial_Module;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -68,9 +69,10 @@ class Plugin {
 		// Register each widget here (EDIT BELOW # 2)
 		require __DIR__ . '/widgets/meta-info.php';
 		require __DIR__ . '/widgets/custom-divider.php';
-		require __DIR__ . '/widgets/twitter-module.php';
 		require __DIR__ . '/widgets/price-table.php';
 		require __DIR__ . '/widgets/portfolio-module.php';
+		require __DIR__ . '/widgets/team-module.php';
+		require __DIR__ . '/widgets/testimonials-module.php';
 	}
 
 	/**
@@ -84,9 +86,10 @@ class Plugin {
 		// Register each widget here (EDIT BELOW # 3)
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Meta_info() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Custom_Divider() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Twitter_Module() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Price_Table() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Portfolio_Module() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Team_Module() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Testimonial_Module() );
 	}
 }
 
