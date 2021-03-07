@@ -130,8 +130,8 @@ class Meta_info extends Widget_Base {
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'meta_label' => __( 'Author', 'nucleus' ),
-						'meta_value' => __( 'Jhon Doe', 'nucleus' ),
+						'meta_label' => __( 'Author', '_nucleus' ),
+						'meta_value' => __( 'Jhon Doe', '_nucleus' ),
 					],
 				],
 				'title_field' => '{{{ meta_label }}}',

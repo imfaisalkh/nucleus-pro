@@ -75,7 +75,7 @@ final class Elementor_Hello_World {
 	 * @access public
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'nucleus' );
+		load_plugin_textdomain( '_nucleus' );
 	}
 
 	/**
@@ -129,9 +129,9 @@ final class Elementor_Hello_World {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
-			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'nucleus' ),
-			'<strong>' . esc_html__( 'Nucleus Pro', 'nucleus' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'nucleus' ) . '</strong>'
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', '_nucleus' ),
+			'<strong>' . esc_html__( 'Nucleus Pro', '_nucleus' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', '_nucleus' ) . '</strong>'
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -152,9 +152,9 @@ final class Elementor_Hello_World {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'nucleus' ),
-			'<strong>' . esc_html__( 'Nucleus Pro', 'nucleus' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'nucleus' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', '_nucleus' ),
+			'<strong>' . esc_html__( 'Nucleus Pro', '_nucleus' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', '_nucleus' ) . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
 
@@ -176,9 +176,9 @@ final class Elementor_Hello_World {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'nucleus' ),
-			'<strong>' . esc_html__( 'Nucleus Pro', 'nucleus' ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', 'nucleus' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', '_nucleus' ),
+			'<strong>' . esc_html__( 'Nucleus Pro', '_nucleus' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', '_nucleus' ) . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
 

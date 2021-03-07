@@ -19,7 +19,7 @@ class Price_Table extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Price Table', 'nucleus' );
+		return __( 'Price Table', '_nucleus' );
 	}
 
 	public function get_icon() {
@@ -31,25 +31,25 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_header',
 			[
-				'label' => __( 'Header', 'nucleus' ),
+				'label' => __( 'Header', '_nucleus' ),
 			]
 		);
 
 		$this->add_control(
 			'heading',
 			[
-				'label' => __( 'Title', 'nucleus' ),
+				'label' => __( 'Title', '_nucleus' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'I am title', 'nucleus' ),
+				'default' => __( 'I am title', '_nucleus' ),
 			]
 		);
 
 		$this->add_control(
 			'sub_heading',
 			[
-				'label' => __( 'Subtitle', 'nucleus' ),
+				'label' => __( 'Subtitle', '_nucleus' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'I am subtitle', 'nucleus' ),
+				'default' => __( 'I am subtitle', '_nucleus' ),
 			]
 		);
 
@@ -58,35 +58,35 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_pricing',
 			[
-				'label' => __( 'Pricing', 'nucleus' ),
+				'label' => __( 'Pricing', '_nucleus' ),
 			]
 		);
 
 		$this->add_control(
 			'currency_symbol',
 			[
-				'label' => __( 'Currency Symbol', 'nucleus' ),
+				'label' => __( 'Currency Symbol', '_nucleus' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'None', 'nucleus' ),
-					'dollar' => '&#36; ' . _x( 'Dollar', 'Currency Symbol', 'nucleus' ),
-					'euro' => '&#128; ' . _x( 'Euro', 'Currency Symbol', 'nucleus' ),
-					'baht' => '&#3647; ' . _x( 'Baht', 'Currency Symbol', 'nucleus' ),
-					'franc' => '&#8355; ' . _x( 'Franc', 'Currency Symbol', 'nucleus' ),
-					'guilder' => '&fnof; ' . _x( 'Guilder', 'Currency Symbol', 'nucleus' ),
-					'krona' => 'kr ' . _x( 'Krona', 'Currency Symbol', 'nucleus' ),
-					'lira' => '&#8356; ' . _x( 'Lira', 'Currency Symbol', 'nucleus' ),
-					'peseta' => '&#8359 ' . _x( 'Peseta', 'Currency Symbol', 'nucleus' ),
-					'peso' => '&#8369; ' . _x( 'Peso', 'Currency Symbol', 'nucleus' ),
-					'pound' => '&#163; ' . _x( 'Pound Sterling', 'Currency Symbol', 'nucleus' ),
-					'real' => 'R$ ' . _x( 'Real', 'Currency Symbol', 'nucleus' ),
-					'ruble' => '&#8381; ' . _x( 'Ruble', 'Currency Symbol', 'nucleus' ),
-					'rupee' => '&#8360; ' . _x( 'Rupee', 'Currency Symbol', 'nucleus' ),
-					'indian_rupee' => '&#8377; ' . _x( 'Rupee (Indian)', 'Currency Symbol', 'nucleus' ),
-					'shekel' => '&#8362; ' . _x( 'Shekel', 'Currency Symbol', 'nucleus' ),
-					'yen' => '&#165; ' . _x( 'Yen/Yuan', 'Currency Symbol', 'nucleus' ),
-					'won' => '&#8361; ' . _x( 'Won', 'Currency Symbol', 'nucleus' ),
-					'custom' => __( 'Custom', 'nucleus' ),
+					'' => __( 'None', '_nucleus' ),
+					'dollar' => '&#36; ' . _x( 'Dollar', 'Currency Symbol', '_nucleus' ),
+					'euro' => '&#128; ' . _x( 'Euro', 'Currency Symbol', '_nucleus' ),
+					'baht' => '&#3647; ' . _x( 'Baht', 'Currency Symbol', '_nucleus' ),
+					'franc' => '&#8355; ' . _x( 'Franc', 'Currency Symbol', '_nucleus' ),
+					'guilder' => '&fnof; ' . _x( 'Guilder', 'Currency Symbol', '_nucleus' ),
+					'krona' => 'kr ' . _x( 'Krona', 'Currency Symbol', '_nucleus' ),
+					'lira' => '&#8356; ' . _x( 'Lira', 'Currency Symbol', '_nucleus' ),
+					'peseta' => '&#8359 ' . _x( 'Peseta', 'Currency Symbol', '_nucleus' ),
+					'peso' => '&#8369; ' . _x( 'Peso', 'Currency Symbol', '_nucleus' ),
+					'pound' => '&#163; ' . _x( 'Pound Sterling', 'Currency Symbol', '_nucleus' ),
+					'real' => 'R$ ' . _x( 'Real', 'Currency Symbol', '_nucleus' ),
+					'ruble' => '&#8381; ' . _x( 'Ruble', 'Currency Symbol', '_nucleus' ),
+					'rupee' => '&#8360; ' . _x( 'Rupee', 'Currency Symbol', '_nucleus' ),
+					'indian_rupee' => '&#8377; ' . _x( 'Rupee (Indian)', 'Currency Symbol', '_nucleus' ),
+					'shekel' => '&#8362; ' . _x( 'Shekel', 'Currency Symbol', '_nucleus' ),
+					'yen' => '&#165; ' . _x( 'Yen/Yuan', 'Currency Symbol', '_nucleus' ),
+					'won' => '&#8361; ' . _x( 'Won', 'Currency Symbol', '_nucleus' ),
+					'custom' => __( 'Custom', '_nucleus' ),
 				],
 				'default' => 'dollar',
 			]
@@ -95,7 +95,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'currency_symbol_custom',
 			[
-				'label' => __( 'Custom Symbol', 'nucleus' ),
+				'label' => __( 'Custom Symbol', '_nucleus' ),
 				'type' => Controls_Manager::TEXT,
 				'condition' => [
 					'currency_symbol' => 'custom',
@@ -106,7 +106,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'price',
 			[
-				'label' => __( 'Price', 'nucleus' ),
+				'label' => __( 'Price', '_nucleus' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => '39.99',
 			]
@@ -115,10 +115,10 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'sale',
 			[
-				'label' => __( 'Sale', 'nucleus' ),
+				'label' => __( 'Sale', '_nucleus' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'On', 'nucleus' ),
-				'label_off' => __( 'Off', 'nucleus' ),
+				'label_on' => __( 'On', '_nucleus' ),
+				'label_off' => __( 'Off', '_nucleus' ),
 				'return_value' => 'yes',
 				'default' => '',
 			]
@@ -127,7 +127,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'original_price',
 			[
-				'label' => __( 'Original Price', 'nucleus' ),
+				'label' => __( 'Original Price', '_nucleus' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '59',
 				'condition' => [
@@ -139,18 +139,18 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'period',
 			[
-				'label' => __( 'Period', 'nucleus' ),
+				'label' => __( 'Period', '_nucleus' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Monthly', 'nucleus' ),
+				'default' => __( 'Monthly', '_nucleus' ),
 			]
 		);
 
 		$this->add_control(
 			'pricing_notes',
 			[
-				'label' => __( 'Additional Notes', 'nucleus' ),
+				'label' => __( 'Additional Notes', '_nucleus' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'This is text element', 'nucleus' ),
+				'default' => __( 'This is text element', '_nucleus' ),
 				'rows' => 2,
 			]
 		);
@@ -160,7 +160,7 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_features',
 			[
-				'label' => __( 'Features', 'nucleus' ),
+				'label' => __( 'Features', '_nucleus' ),
 			]
 		);
 
@@ -169,16 +169,16 @@ class Price_Table extends Widget_Base {
 		$repeater->add_control(
 			'item_text',
 			[
-				'label' => __( 'Text', 'nucleus' ),
+				'label' => __( 'Text', '_nucleus' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'List Item', 'nucleus' ),
+				'default' => __( 'List Item', '_nucleus' ),
 			]
 		);
 
 		$repeater->add_control(
 			'item_icon',
 			[
-				'label' => __( 'Icon', 'nucleus' ),
+				'label' => __( 'Icon', '_nucleus' ),
 				'type' => Controls_Manager::ICON,
 				'default' => 'fa fa-check-circle',
 			]
@@ -187,7 +187,7 @@ class Price_Table extends Widget_Base {
 		$repeater->add_control(
 			'item_icon_color',
 			[
-				'label' => __( 'Icon Color', 'nucleus' ),
+				'label' => __( 'Icon Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} i' => 'color: {{VALUE}}',
@@ -202,15 +202,15 @@ class Price_Table extends Widget_Base {
 				'fields' => array_values( $repeater->get_controls() ),
 				'default' => [
 					[
-						'item_text' => __( 'List Item #1', 'nucleus' ),
+						'item_text' => __( 'List Item #1', '_nucleus' ),
 						'item_icon' => 'fa fa-check-circle',
 					],
 					[
-						'item_text' => __( 'List Item #2', 'nucleus' ),
+						'item_text' => __( 'List Item #2', '_nucleus' ),
 						'item_icon' => 'fa fa-check-circle',
 					],
 					[
-						'item_text' => __( 'List Item #3', 'nucleus' ),
+						'item_text' => __( 'List Item #3', '_nucleus' ),
 						'item_icon' => 'fa fa-check-circle',
 					],
 				],
@@ -223,23 +223,23 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_footer',
 			[
-				'label' => __( 'Footer', 'nucleus' ),
+				'label' => __( 'Footer', '_nucleus' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text',
 			[
-				'label' => __( 'Button Text', 'nucleus' ),
+				'label' => __( 'Button Text', '_nucleus' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Click Here', 'nucleus' ),
+				'default' => __( 'Click Here', '_nucleus' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'nucleus' ),
+				'label' => __( 'Link', '_nucleus' ),
 				'type' => Controls_Manager::URL,
 				'placeholder' => 'http://your-link.com',
 				'default' => [
@@ -251,9 +251,9 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'footer_additional_info',
 			[
-				'label' => __( 'Additional Info', 'nucleus' ),
+				'label' => __( 'Additional Info', '_nucleus' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'This is text element', 'nucleus' ),
+				'default' => __( 'This is text element', '_nucleus' ),
 				'rows' => 2,
 			]
 		);
@@ -263,17 +263,17 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_ribbon',
 			[
-				'label' => __( 'Featured', 'nucleus' ),
+				'label' => __( 'Featured', '_nucleus' ),
 			]
 		);
 
 		$this->add_control(
 			'is_featured',
 			[
-				'label' => __( 'Featured', 'nucleus' ),
+				'label' => __( 'Featured', '_nucleus' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'nucleus' ),
-				'label_off' => __( 'No', 'nucleus' ),
+				'label_on' => __( 'Yes', '_nucleus' ),
+				'label_off' => __( 'No', '_nucleus' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -285,7 +285,7 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_header_style',
 			[
-				'label' => __( 'Header', 'nucleus' ),
+				'label' => __( 'Header', '_nucleus' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			]
@@ -294,7 +294,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'header_bg_color',
 			[
-				'label' => __( 'Background Color', 'nucleus' ),
+				'label' => __( 'Background Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => Scheme_Color::get_type(),
@@ -309,7 +309,7 @@ class Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'header_padding',
 			[
-				'label' => __( 'Padding', 'nucleus' ),
+				'label' => __( 'Padding', '_nucleus' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -321,7 +321,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_heading_style',
 			[
-				'label' => __( 'Title', 'nucleus' ),
+				'label' => __( 'Title', '_nucleus' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -330,7 +330,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_color',
 			[
-				'label' => __( 'Color', 'nucleus' ),
+				'label' => __( 'Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__heading' => 'color: {{VALUE}}',
@@ -350,7 +350,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_sub_heading_style',
 			[
-				'label' => __( 'Sub Title', 'nucleus' ),
+				'label' => __( 'Sub Title', '_nucleus' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -359,7 +359,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'sub_heading_color',
 			[
-				'label' => __( 'Color', 'nucleus' ),
+				'label' => __( 'Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__subheading' => 'color: {{VALUE}}',
@@ -381,7 +381,7 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_pricing_element_style',
 			[
-				'label' => __( 'Pricing', 'nucleus' ),
+				'label' => __( 'Pricing', '_nucleus' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			]
@@ -390,7 +390,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'pricing_element_bg_color',
 			[
-				'label' => __( 'Background Color', 'nucleus' ),
+				'label' => __( 'Background Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__price' => 'background-color: {{VALUE}}',
@@ -401,7 +401,7 @@ class Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'pricing_element_padding',
 			[
-				'label' => __( 'Padding', 'nucleus' ),
+				'label' => __( 'Padding', '_nucleus' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -413,7 +413,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'price_color',
 			[
-				'label' => __( 'Color', 'nucleus' ),
+				'label' => __( 'Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__currency, {{WRAPPER}} .elementor-price-table__integer-part, {{WRAPPER}} .elementor-price-table__fractional-part' => 'color: {{VALUE}}',
@@ -434,7 +434,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_currency_style',
 			[
-				'label' => __( 'Currency Symbol', 'nucleus' ),
+				'label' => __( 'Currency Symbol', '_nucleus' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -446,7 +446,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'currency_size',
 			[
-				'label' => __( 'Size', 'nucleus' ),
+				'label' => __( 'Size', '_nucleus' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -466,20 +466,20 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'currency_vertical_position',
 			[
-				'label' => __( 'Vertical Position', 'nucleus' ),
+				'label' => __( 'Vertical Position', '_nucleus' ),
 				'type' => Controls_Manager::CHOOSE,
 				'label_block' => false,
 				'options' => [
 					'top' => [
-						'title' => __( 'Top', 'nucleus' ),
+						'title' => __( 'Top', '_nucleus' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'middle' => [
-						'title' => __( 'Middle', 'nucleus' ),
+						'title' => __( 'Middle', '_nucleus' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'bottom' => [
-						'title' => __( 'Bottom', 'nucleus' ),
+						'title' => __( 'Bottom', '_nucleus' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -501,7 +501,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'fractional_part_style',
 			[
-				'label' => __( 'Fractional Part', 'nucleus' ),
+				'label' => __( 'Fractional Part', '_nucleus' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -510,7 +510,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'fractional-part_size',
 			[
-				'label' => __( 'Size', 'nucleus' ),
+				'label' => __( 'Size', '_nucleus' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -527,20 +527,20 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'fractional_part_vertical_position',
 			[
-				'label' => __( 'Vertical Position', 'nucleus' ),
+				'label' => __( 'Vertical Position', '_nucleus' ),
 				'type' => Controls_Manager::CHOOSE,
 				'label_block' => false,
 				'options' => [
 					'top' => [
-						'title' => __( 'Top', 'nucleus' ),
+						'title' => __( 'Top', '_nucleus' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'middle' => [
-						'title' => __( 'Middle', 'nucleus' ),
+						'title' => __( 'Middle', '_nucleus' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'bottom' => [
-						'title' => __( 'Bottom', 'nucleus' ),
+						'title' => __( 'Bottom', '_nucleus' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -559,7 +559,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_original_price_style',
 			[
-				'label' => __( 'Original Price', 'nucleus' ),
+				'label' => __( 'Original Price', '_nucleus' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -572,7 +572,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'original_price_color',
 			[
-				'label' => __( 'Color', 'nucleus' ),
+				'label' => __( 'Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => Scheme_Color::get_type(),
@@ -604,20 +604,20 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'original_price_vertical_position',
 			[
-				'label' => __( 'Vertical Position', 'nucleus' ),
+				'label' => __( 'Vertical Position', '_nucleus' ),
 				'type' => Controls_Manager::CHOOSE,
 				'label_block' => false,
 				'options' => [
 					'top' => [
-						'title' => __( 'Top', 'nucleus' ),
+						'title' => __( 'Top', '_nucleus' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'middle' => [
-						'title' => __( 'Middle', 'nucleus' ),
+						'title' => __( 'Middle', '_nucleus' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'bottom' => [
-						'title' => __( 'Bottom', 'nucleus' ),
+						'title' => __( 'Bottom', '_nucleus' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -640,7 +640,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_period_style',
 			[
-				'label' => __( 'Period', 'nucleus' ),
+				'label' => __( 'Period', '_nucleus' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -652,7 +652,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'period_color',
 			[
-				'label' => __( 'Color', 'nucleus' ),
+				'label' => __( 'Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => Scheme_Color::get_type(),
@@ -682,7 +682,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'period_position',
 			[
-				'label' => __( 'Position', 'nucleus' ),
+				'label' => __( 'Position', '_nucleus' ),
 				'type' => Controls_Manager::SELECT,
 				'label_block' => false,
 				'options' => [
@@ -701,7 +701,7 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_features_list_style',
 			[
-				'label' => __( 'Features', 'nucleus' ),
+				'label' => __( 'Features', '_nucleus' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			]
@@ -710,7 +710,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'features_list_bg_color',
 			[
-				'label' => __( 'Background Color', 'nucleus' ),
+				'label' => __( 'Background Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'separator' => 'before',
 				'selectors' => [
@@ -722,7 +722,7 @@ class Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'features_list_padding',
 			[
-				'label' => __( 'Padding', 'nucleus' ),
+				'label' => __( 'Padding', '_nucleus' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -734,7 +734,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'features_list_color',
 			[
-				'label' => __( 'Color', 'nucleus' ),
+				'label' => __( 'Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => Scheme_Color::get_type(),
@@ -759,20 +759,20 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'features_list_alignment',
 			[
-				'label' => __( 'Alignment', 'nucleus' ),
+				'label' => __( 'Alignment', '_nucleus' ),
 				'type' => Controls_Manager::CHOOSE,
 				'label_block' => false,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'nucleus' ),
+						'title' => __( 'Left', '_nucleus' ),
 						'icon'  => 'fa fa-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'nucleus' ),
+						'title' => __( 'Center', '_nucleus' ),
 						'icon'  => 'fa fa-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'nucleus' ),
+						'title' => __( 'Right', '_nucleus' ),
 						'icon'  => 'fa fa-align-right',
 					],
 				],
@@ -785,7 +785,7 @@ class Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'item_width',
 			[
-				'label' => __( 'Width', 'nucleus' ),
+				'label' => __( 'Width', '_nucleus' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'%' => [
@@ -802,10 +802,10 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'list_divider',
 			[
-				'label' => __( 'Divider', 'nucleus' ),
+				'label' => __( 'Divider', '_nucleus' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'nucleus' ),
-				'label_off' => __( 'No', 'nucleus' ),
+				'label_on' => __( 'Yes', '_nucleus' ),
+				'label_off' => __( 'No', '_nucleus' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -815,13 +815,13 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'divider_style',
 			[
-				'label' => __( 'Style', 'nucleus' ),
+				'label' => __( 'Style', '_nucleus' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'solid' => __( 'Solid', 'nucleus' ),
-					'double' => __( 'Double', 'nucleus' ),
-					'dotted' => __( 'Dotted', 'nucleus' ),
-					'dashed' => __( 'Dashed', 'nucleus' ),
+					'solid' => __( 'Solid', '_nucleus' ),
+					'double' => __( 'Double', '_nucleus' ),
+					'dotted' => __( 'Dotted', '_nucleus' ),
+					'dashed' => __( 'Dashed', '_nucleus' ),
 				],
 				'default' => 'solid',
 				'condition' => [
@@ -836,7 +836,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'divider_color',
 			[
-				'label' => __( 'Color', 'nucleus' ),
+				'label' => __( 'Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#ddd',
 				'scheme' => [
@@ -855,7 +855,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'divider_weight',
 			[
-				'label' => __( 'Weight', 'nucleus' ),
+				'label' => __( 'Weight', '_nucleus' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 2,
@@ -879,7 +879,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'divider_width',
 			[
-				'label' => __( 'Width', 'nucleus' ),
+				'label' => __( 'Width', '_nucleus' ),
 				'type' => Controls_Manager::SLIDER,
 				'condition' => [
 					'list_divider' => 'yes',
@@ -893,7 +893,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'divider_gap',
 			[
-				'label' => __( 'Gap', 'nucleus' ),
+				'label' => __( 'Gap', '_nucleus' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 15,
@@ -919,7 +919,7 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_footer_style',
 			[
-				'label' => __( 'Footer', 'nucleus' ),
+				'label' => __( 'Footer', '_nucleus' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			]
@@ -928,7 +928,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'footer_bg_color',
 			[
-				'label' => __( 'Background Color', 'nucleus' ),
+				'label' => __( 'Background Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__footer' => 'background-color: {{VALUE}}',
@@ -939,7 +939,7 @@ class Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'footer_padding',
 			[
-				'label' => __( 'Padding', 'nucleus' ),
+				'label' => __( 'Padding', '_nucleus' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -951,7 +951,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_footer_button',
 			[
-				'label' => __( 'Button', 'nucleus' ),
+				'label' => __( 'Button', '_nucleus' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -963,15 +963,15 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_size',
 			[
-				'label' => __( 'Size', 'nucleus' ),
+				'label' => __( 'Size', '_nucleus' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'md',
 				'options' => [
-					'xs' => __( 'Extra Small', 'nucleus' ),
-					'sm' => __( 'Small', 'nucleus' ),
-					'md' => __( 'Medium', 'nucleus' ),
-					'lg' => __( 'Large', 'nucleus' ),
-					'xl' => __( 'Extra Large', 'nucleus' ),
+					'xs' => __( 'Extra Small', '_nucleus' ),
+					'sm' => __( 'Small', '_nucleus' ),
+					'md' => __( 'Medium', '_nucleus' ),
+					'lg' => __( 'Large', '_nucleus' ),
+					'xl' => __( 'Extra Large', '_nucleus' ),
 				],
 				'condition' => [
 					'button_text!' => '',
@@ -984,7 +984,7 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'nucleus' ),
+				'label' => __( 'Normal', '_nucleus' ),
 				'condition' => [
 					'button_text!' => '',
 				],
@@ -994,7 +994,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_text_color',
 			[
-				'label' => __( 'Text Color', 'nucleus' ),
+				'label' => __( 'Text Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1010,7 +1010,7 @@ class Price_Table extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'button_typography',
-				'label' => __( 'Typography', 'nucleus' ),
+				'label' => __( 'Typography', '_nucleus' ),
 				'scheme' => Scheme_Typography::TYPOGRAPHY_4,
 				'selector' => '{{WRAPPER}} .elementor-price-table__button',
 				'condition' => [
@@ -1022,7 +1022,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_background_color',
 			[
-				'label' => __( 'Background Color', 'nucleus' ),
+				'label' => __( 'Background Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => Scheme_Color::get_type(),
@@ -1040,7 +1040,7 @@ class Price_Table extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Border::get_type(), [
 				'name' => 'button_border',
-				'label' => __( 'Border', 'nucleus' ),
+				'label' => __( 'Border', '_nucleus' ),
 				'placeholder' => '1px',
 				'default' => '1px',
 				'selector' => '{{WRAPPER}} .elementor-price-table__button',
@@ -1054,7 +1054,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_border_radius',
 			[
-				'label' => __( 'Border Radius', 'nucleus' ),
+				'label' => __( 'Border Radius', '_nucleus' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -1069,7 +1069,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_text_padding',
 			[
-				'label' => __( 'Text Padding', 'nucleus' ),
+				'label' => __( 'Text Padding', '_nucleus' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -1086,7 +1086,7 @@ class Price_Table extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'nucleus' ),
+				'label' => __( 'Hover', '_nucleus' ),
 				'condition' => [
 					'button_text!' => '',
 				],
@@ -1096,7 +1096,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_hover_color',
 			[
-				'label' => __( 'Text Color', 'nucleus' ),
+				'label' => __( 'Text Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__button:hover' => 'color: {{VALUE}};',
@@ -1110,7 +1110,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label' => __( 'Background Color', 'nucleus' ),
+				'label' => __( 'Background Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__button:hover' => 'background-color: {{VALUE}};',
@@ -1124,7 +1124,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_hover_border_color',
 			[
-				'label' => __( 'Border Color', 'nucleus' ),
+				'label' => __( 'Border Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__button:hover' => 'border-color: {{VALUE}};',
@@ -1138,7 +1138,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_hover_animation',
 			[
-				'label' => __( 'Animation', 'nucleus' ),
+				'label' => __( 'Animation', '_nucleus' ),
 				'type' => Controls_Manager::HOVER_ANIMATION,
 				'condition' => [
 					'button_text!' => '',
@@ -1153,7 +1153,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_additional_info',
 			[
-				'label' => __( 'Additional Info', 'nucleus' ),
+				'label' => __( 'Additional Info', '_nucleus' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -1165,7 +1165,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'additional_info_color',
 			[
-				'label' => __( 'Color', 'nucleus' ),
+				'label' => __( 'Color', '_nucleus' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => Scheme_Color::get_type(),
@@ -1195,7 +1195,7 @@ class Price_Table extends Widget_Base {
 		$this->add_control(
 			'additional_info_margin',
 			[
-				'label' => __( 'Margin', 'nucleus' ),
+				'label' => __( 'Margin', '_nucleus' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default' => [
