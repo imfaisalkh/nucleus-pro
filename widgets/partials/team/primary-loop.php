@@ -7,7 +7,7 @@
 <article id="member-<?php the_ID(); ?>" <?php post_class("grid-item"); ?>>
 		
     <figure class="member-photo">
-        <img src="<?php the_post_thumbnail_url(); ?>">
+        <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
     </figure>
 
     <header class="member-details">
